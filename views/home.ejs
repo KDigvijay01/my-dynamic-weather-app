@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            width:100vw;
+            height:100vh;
+            background-image: 
+              linear-gradient(10deg, rgba(
+                145, 146, 122, 0.62), rgba(
+                  217, 91, 132, 0.58)), url('https://cdn.wallpapersafari.com/69/94/8962Ta.jpg');
+
+            /* background-image: url(https://cdn.wallpapersafari.com/69/94/8962Ta.jpg),linear-gradient(black,black); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container{
+            width: 100%;
+            height:30%;
+           
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: 50px;
+            
+            flex-direction: row;
+        }
+        
+        .search{
+            display: flex;
+            justify-content: center;
+            font-size:40px;
+            box-sizing: inherit;
+            background-color: darkgrey;
+            /* border:1px solid white; */
+            border-radius:25px;
+        }
+        .searchbutton{
+            
+            display: flex;
+            justify-content: center;
+        }
+        .btn{
+            border:1px solid white;
+            border-radius:10px;
+            background-color:aqua;
+            font-size:30px;
+        }
+        .searchbar{
+            width:100%;
+            height:100%;
+            margin-bottom: 10px;
+        }
+        .nav .star{
+            font-size:50px;
+            animation: spin 5s linear infinite;
+            animation-play-state:paused;
+            
+        }
+        .star{
+            animation-play-state: running;
+        }
+        @keyframes spin {
+           100% {
+    transform: rotate(1turn);
+  }
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+            <h2><span class="star">*</span>Know Weather<span class="star">*</span></h2>
+    </div>
+    <div class="container">
+        <form action='/home' method='POST'> 
+            <div class="searchbar"> 
+                <input type="text" name="type" id="type" placeholder="search city.." class="search">
+            </div>
+            <div class="searchbutton">
+                <input type="submit" value="search" class="btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
